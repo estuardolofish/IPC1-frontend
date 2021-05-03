@@ -70,14 +70,15 @@ function modificarPaciente() {
             alert(response.Mensaje)
              
          }else{
+             location.reload();
              
              localStorage.setItem("usuario", userName);
              localStorage.setItem("nombre", nombre);
              localStorage.setItem("apellido", apellido);
              document.querySelector('#usuario-nombre').innerHTML = localStorage.getItem("usuario");
              document.querySelector('#nombre-inicio').innerHTML = localStorage.getItem("nombre") + " " + localStorage.getItem("apellido") +  `<small>` + localStorage.getItem("tipo") +`</small>`;
-             location.href = "/Frontend/Paciente.html";
-             alert(response.Mensaje)
+             location.reload();       
+                   alert(response.Mensaje)
          }
      })
     

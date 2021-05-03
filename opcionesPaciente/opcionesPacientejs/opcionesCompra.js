@@ -46,8 +46,8 @@ function modificarPacienteCompra() {
              document.querySelector('#nombre-inicio').innerHTML = localStorage.getItem("nombre") + " " + localStorage.getItem("apellido") +  `<small>` + localStorage.getItem("tipo") +`</small>`;
      
               console.log(response);
-            location.href = "/Frontend/opcionesPaciente/Compra.html";
-              alert(response.Mensaje)
+              location.reload();
+                            alert(response.Mensaje)
          }
      })
     

@@ -72,7 +72,7 @@ function modificarEnfermera() {
              localStorage.setItem("apellido", apellido);
              document.querySelector('#usuario-nombre').innerHTML = localStorage.getItem("usuario");
              document.querySelector('#nombre-inicio').innerHTML = localStorage.getItem("nombre") + " " + localStorage.getItem("apellido") +  `<small>` + localStorage.getItem("tipo") +`</small>`;
-             location.href = "/Frontend/Paciente.html";
+             location.reload();
              alert(response.Mensaje)
          }
      })
