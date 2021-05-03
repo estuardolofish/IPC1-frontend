@@ -1,0 +1,47 @@
+.iniciar-sesion, .ingreso-paciente
+{
+    width: 100%;
+}
+.txtcovid
+{
+    padding: 10px;
+    font-size: 25px;
+}
+.aquitexto
+{
+
+    color: black;
+    text-decoration: none;
+}
+#usuarioNombre
+{
+    font-size: 25px;
+}
+
+#fechaCita
+{
+    width: 200px;
+}
+#horaCita
+{
+    width: 205px;
+}
+#listaMedicamentos, #listaDoctores
+{
+    width: 250px;
+    height: 46px;
+}
+#listaPacientes, #listaPadecimiento
+{
+    width: 395px;
+    height: 46px;
+}
+#listaDoctores
+{
+    width: 405px;
+    height: 46px;
+}
+#cantidadCompra
+{
+    width: 100px;
+}
