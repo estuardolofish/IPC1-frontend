@@ -21,7 +21,7 @@ function ingresoLogin(){
 
         sessionStorage.setItem("buscar", usuario);
         var usuario = sessionStorage.buscar;
-        fetch(`http://localhost:3000/Usuarios/${usuario}`, {
+        fetch(`https://proyecto2-backend-ipc1.herokuapp.com/Usuarios/${usuario}`, {
         method: 'GET',
         headers:{
             'Content-Type': 'application/json',
