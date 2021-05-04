@@ -74,20 +74,26 @@ function cargarComboMedicamentos()
         for(var i in response)
         {
             // Medicamentos
-
-            if (response[i].Cantidad > 0) {
-
-                cadena += 
-                `
-                <option value="${response[i].IdMedicamento} ${response[i].Nombre}">
-                   ==>
-                    Precio: Q. ${response[i].Precio} - 
-                    Cantidad: ${response[i].Cantidad} -
-                    Descripcion: ${response[i].Descripcion} 
-                </option>
-                `
+            if (response[i].IdMedicamento == 0) {
                 
+            }else
+            {
+                if (response[i].Cantidad > 0) {
+
+                    cadena += 
+                    `
+                    <option value="${response[i].IdMedicamento} ${response[i].Nombre}">
+                       ==>
+                        Precio: Q. ${response[i].Precio} - 
+                        Cantidad: ${response[i].Cantidad} -
+                        Descripcion: ${response[i].Descripcion} 
+                    </option>
+                    `
+                    
+                }
+
             }
+
            
         }
         combo.innerHTML = cadena;
@@ -298,7 +304,7 @@ function PDFreporteCompra() {
 
         })
 
-
+        location.reload();
 
     var sTable = document.getElementById('tablacompradiv').innerHTML;
 

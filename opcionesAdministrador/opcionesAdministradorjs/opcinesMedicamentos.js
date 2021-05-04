@@ -72,21 +72,28 @@ function cargarTablaMedicamentos()
         {
             // Medicamentos
 
+            if (response[i].IdMedicamento == 0) {
+                
+            }else
+            {
 
+                cadena += 
+                `
+                    <tr>
+                        <td>${response[i].IdMedicamento}</td>
+                        <td>${response[i].Nombre}</td>
+                        <td>Q. ${response[i].Precio}</td>
+                        <td>${response[i].Descripcion}</td>
+                        <td>${response[i].Cantidad}</td>
+                        <td> 
+                        <button type="button" onclick="accionesMedicamento(this)" class="fa fa-pencil-square-o btn btn-success btnAccionesMedicamento" aria-hidden="true" data-toggle="modal" data-target="#modalEditarMedicamento"  value=${response[i].IdMedicamento}></button> 
+                        </td>
+                    </tr>
+                `
+
+            }
                  // console.log(response[i]);
-            cadena += 
-            `
-                <tr>
-                    <td>${response[i].IdMedicamento}</td>
-                    <td>${response[i].Nombre}</td>
-                    <td>Q. ${response[i].Precio}</td>
-                    <td>${response[i].Descripcion}</td>
-                    <td>${response[i].Cantidad}</td>
-                    <td> 
-                    <button type="button" onclick="accionesMedicamento(this)" class="fa fa-pencil-square-o btn btn-success btnAccionesMedicamento" aria-hidden="true" data-toggle="modal" data-target="#modalEditarMedicamento"  value=${response[i].IdMedicamento}></button> 
-                    </td>
-                </tr>
-            `
+ 
                 
             
            
