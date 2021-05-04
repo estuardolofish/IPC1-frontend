@@ -304,7 +304,7 @@ function PDFreporteCompra() {
 
         })
 
-        location.reload();
+        
 
     var sTable = document.getElementById('tablacompradiv').innerHTML;
 
@@ -328,7 +328,7 @@ function PDFreporteCompra() {
         win.document.close(); 	// CLOSE THE CURRENT WINDOW.
 
         win.print();    // PRINT THE CONTENTS.
-
+location.reload();
         
 
 }
