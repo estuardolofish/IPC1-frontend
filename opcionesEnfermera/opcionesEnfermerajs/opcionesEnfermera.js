@@ -102,21 +102,28 @@ function MostrarCitas() {
         for(var i in response)
         {
             if (response[i].Estado == "Pendiente") {
+                if (response[i].IdCita == 0) {
+                    
+                }else
+                {
+                    cadena += 
+                    `
+                        <tr>
+                       
+                            <td>${response[i].IdCita}</td>
+                            <td>${response[i].Fecha}</td>
+                            <td>${response[i].Hora}</td>
+                            <td>${response[i].Motivo}</td>
+                            <td><input type="button" onclick="aceptarCita(this)" class="btn btn-success" name="${response[i].IdCita}" value="Aceptar"></td>
+                            <td><input type="button" onclick="rechazarCita(this)" class="btn btn-danger"  name="${response[i].IdCita}" value="Rechazar"></td>
+                          
+        
+                        </tr>
+                    `
 
-                cadena += 
-                `
-                    <tr>
-                   
-                        <td>${response[i].IdCita}</td>
-                        <td>${response[i].Fecha}</td>
-                        <td>${response[i].Hora}</td>
-                        <td>${response[i].Motivo}</td>
-                        <td><input type="button" onclick="aceptarCita(this)" class="btn btn-success" name="${response[i].IdCita}" value="Aceptar"></td>
-                        <td><input type="button" onclick="rechazarCita(this)" class="btn btn-danger"  name="${response[i].IdCita}" value="Rechazar"></td>
-                      
-    
-                    </tr>
-                `
+                }
+
+               
                 
             }            
            
